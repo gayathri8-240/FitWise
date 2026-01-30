@@ -1,0 +1,337 @@
+		
+		
+		
+		* {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #f7f7f7;
+            margin: 0;
+        }
+
+        header {
+            background: #c44569;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 8px 20px;
+            margin-left: 8px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .nav-buttons button:hover {
+            background: white;
+            color: #c44569;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .user-info {
+            color: white;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+
+        .logout-btn {
+            background: #e74c3c;
+            padding: 8px 15px;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
+
+        main {
+            flex: 1;
+            background: #fde8ef;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #ffd1df;
+        }
+
+        h1 {
+            color: #c44569;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #b5b5b5;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #c44569;
+        }
+
+        .btn {
+            width: 100%;
+            background: #c44569;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .toggle-link {
+            text-align: center;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        .toggle-link a {
+            color: #c44569;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .password-strength {
+            font-size: 12px;
+            margin-top: 5px;
+            padding: 8px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .password-strength.weak {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        .password-strength.medium {
+            background: #fff3cd;
+            color: #856404;
+            display: block;
+        }
+
+        .password-strength.strong {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            text-align: center;
+            display: none;
+            border: 1px solid #ddd;
+        }
+
+        .result.show {
+            display: block;
+        }
+
+        .bmi-value {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .bmi-category {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .bmi-info {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .bmi-chart {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f2f2f2;
+            border-radius: 6px;
+        }
+
+        .bmi-chart h3 {
+            color: #c44569;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+        }
+
+        .chart-bar.active {
+            border-color: black;
+            font-weight: bold;
+        }
+
+        .chart-label {
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .chart-range {
+            flex: 1;
+            height: 26px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .underweight-bar { background: #3498db; }
+        .normal-bar { background: #27ae60; }
+        .overweight-bar { background: #f39c12; }
+        .obese-bar { background: #e74c3c; }
+
+        footer {
+            background: #c44569;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        .footer-links {
+            margin-top: 8px;
+        }
+
+        .footer-links a {
+            color: #ffe9f2;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .checkbox-group input {
+            width: auto;
+        }
+		
+		#viewRecommendationsBtn {
+		background-color: #27ae60;
+		color: white;
+		font-weight: bold;
+		margin: 20px 0;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+}
+
+		#viewRecommendationsBtn:hover {
+		  opacity: 0.9;
+		}
